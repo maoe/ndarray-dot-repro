@@ -1,0 +1,21 @@
+[package]
+name = "ndarray-dot-repro"
+version = "0.1.0"
+authors = ["Mitsutoshi Aoe <me@maoe.name>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+# ndarray = { version = "0.14.0", path = "ndarray", features = ["blas"] }
+ndarray = { version = "0.14.0", features = ["blas"] }
+blas-src = { version = "0.6.2", features = ["openblas"], default-features = false }
+openblas-src = { version = "0.10.2", features = ["static", "cblas"], default-features = false }
+cblas-sys = "0.1.4"
+
+[dev-dependencies]
+pretty_assertions = "0.7.1"
+
+[patch.crates-io]
+blas-src = { git = 'https://github.com/maoe/blas-src', rev = '47656b86cac12fe5d5b5edd37809ab2374f87c87', features = ["openblas"], default-features = false }
+openblas-src = { git = 'https://github.com/maoe/openblas-src', rev = '4f41bae128026db158f6801785f35ef0237bd02c', features = ["static"], default-features = false }
