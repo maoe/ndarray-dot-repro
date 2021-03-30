@@ -1,6 +1,7 @@
 use cblas_sys::{cblas_dgemm, CBLAS_LAYOUT::CblasRowMajor, CBLAS_TRANSPOSE::CblasNoTrans};
 
-extern crate openblas_src as _;
+#[link(name = "openblas")]
+extern "C" {}
 
 fn main() {
     let lhs_trans = CblasNoTrans;
