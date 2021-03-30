@@ -14,4 +14,4 @@ openblas-src = { version = "0.10.2", features = ["static", "cblas"], default-fea
 cblas-sys = "0.1.4"
 
 [patch.crates-io]
-openblas-src = { git = 'https://github.com/maoe/openblas-src', rev = '4f41bae128026db158f6801785f35ef0237bd02c', features = ["static"], default-features = false }
+openblas-src = { git = 'https://github.com/maoe/openblas-src', rev = '4f41bae128026db158f6801785f35ef0237bd02c' }
