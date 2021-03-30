@@ -8,7 +8,7 @@ edition = "2018"
 
 [dependencies]
 blas-src = { git = "https://github.com/maoe/blas-src.git", branch = "openblas-no-default-features", features = ["openblas"], default-features = false }
-openblas-src = { version = "0.10.2", features = ["static", "cblas"], default-features = false }
+openblas-src = { version = "0.10.2", features = ["cblas"], default-features = false }
 cblas-sys = "0.1.4"
 
 [patch.crates-io]
