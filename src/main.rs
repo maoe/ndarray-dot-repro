@@ -1,6 +1,5 @@
 use cblas_sys::{cblas_dgemm, CBLAS_LAYOUT::CblasRowMajor, CBLAS_TRANSPOSE::CblasNoTrans};
 
-extern crate blas_src as _;
 extern crate openblas_src as _;
 
 fn main() {
