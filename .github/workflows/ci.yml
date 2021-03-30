@@ -27,4 +27,5 @@ jobs:
       - uses: actions-rs/cargo@v1
         name: Run the main
         with:
-          command: run --features ${{ matrix.features }}
+          command: run
+          args: --features ${{ matrix.features }}
