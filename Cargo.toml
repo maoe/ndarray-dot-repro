@@ -7,9 +7,5 @@ edition = "2018"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-# blas-src = { git = "https://github.com/maoe/blas-src.git", branch = "openblas-no-default-features", features = ["openblas"], default-features = false }
-openblas-src = { version = "0.10.2", features = ["cblas"], default-features = false }
+openblas-src = { git = "https://github.com/maoe/openblas-src", rev = "d2883cc7975ad519ab8ca35582078af839a360fa" }
 cblas-sys = "0.1.4"
-
-[patch.crates-io]
-openblas-src = { git = 'https://github.com/maoe/openblas-src', rev = '4f41bae128026db158f6801785f35ef0237bd02c' }
