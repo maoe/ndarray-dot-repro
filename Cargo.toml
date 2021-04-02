@@ -9,4 +9,4 @@ edition = "2018"
 [dependencies]
 cblas-sys = "0.1.4"
 ndarray = "0.15.1"
-openblas-src = { git = "https://github.com/maoe/openblas-src", rev = "d2883cc7975ad519ab8ca35582078af839a360fa" }
+openblas-src = { git = "https://github.com/maoe/openblas-src", rev = "aa187f3772a671485b65ae718d78c9f47ebe339c" }
