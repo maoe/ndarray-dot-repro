@@ -1,3 +1,8 @@
+extern crate openblas_src as _;
+
+// #[link(name = "openblas")]
+// extern "C" {}
+
 fn main() {
     let x = ndarray::ArrayView::from_shape(
         83,
@@ -841,5 +846,17 @@ fn main() {
         ],
     )
     .unwrap();
-    assert_eq!(x.dot(&y)[0], -30255.519744116245);
+    let actual = x.dot(&y);
+    let expected: ndarray::Array1<f64> = ndarray::array![
+        -30255.519744116253,
+        80481.07105178064,
+        -213832.45236497791,
+        655674.4251530744,
+        -1830510.183704956,
+        10024.939122373735,
+        -27919.903224880883,
+        77276.90976618728,
+        -206777.3162036288
+    ];
+    assert_eq!(actual, expected);
 }
